@@ -44,7 +44,7 @@ void threadMain(void *arg)
     push_local_directory("");
     printf("One print cycle complete.\n");
     push_local_directory("");
-    printf("Second print cycle complete.\nSTART to exit.\n");
+    printf("Print cycle complete.\nPress A to hang...?\n");
     threadExit(0);
 }
 

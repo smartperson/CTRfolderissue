@@ -28,9 +28,9 @@ void push_local_file(char *dirPath) {
 }
 
 void push_local_directory(char *dirPath) {
-    printf("%s\n", dirPath);
     char absolutePath[512];
     snprintf(absolutePath, sizeof(absolutePath), "%s%s", "/JKSV2", dirPath);
+    printf("%s\n", dirPath);
     DIR *parentDirectory = opendir(absolutePath);
     printf("-> opened\n");
     struct dirent *dir = NULL;

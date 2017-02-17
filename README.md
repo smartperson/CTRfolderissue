@@ -21,5 +21,5 @@ Actual:
 
 Observations:
 
-* Based on console output, the hang occurs on line 27 of `local_files.c`.
+* Based on console output, the hang occurs on line 34 of `remote_files.c`.
 * Running the print cycle twice during the same thread's execution does not cause any issues. It is only a problem when the first thread is finished and a new thread is created.
