@@ -34,7 +34,8 @@ char *copy_concatenated_path(char *basePath, char *addedComponent) {
     int newPathLength;
     char *newPath;
     newPathLength = snprintf(NULL, 0, "%s/%s", basePath, addedComponent)+1;
-    newPath = (char *)malloc(newPathLength);
+    newPath = (char *)malloc(newPathLength+1);
+    memset(newPath, 0, newPathLength+1);
     snprintf(newPath, newPathLength, "%s/%s", basePath, addedComponent);
     return newPath;
 }
@@ -49,7 +50,8 @@ char *copy_absolute_local_path(char *relativePath) { //if you use this, you bett
     int absoluteLocalLength;
     char *absoluteLocalPath;
     absoluteLocalLength = snprintf(NULL, 0, "%s%s", localSharedPath, relativePath)+1;
-    absoluteLocalPath = (char *)malloc(absoluteLocalLength);
+    absoluteLocalPath = (char *)malloc(absoluteLocalLength+1);
+    memset(absoluteLocalPath, 0, absoluteLocalLength+1);
     snprintf(absoluteLocalPath, absoluteLocalLength, "%s%s", localSharedPath, relativePath);
     return absoluteLocalPath;
 }
