@@ -4,6 +4,7 @@ Environment:
 
 * N3DS with 11.2
 * unzipped JKSV2 folder placed in root of SD card
+* App creates a thread that crawls through a specified directory and prints out folder names and file info. App then creates a new thread to do the same thing.
 
 Steps:
 
